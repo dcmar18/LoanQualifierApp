@@ -113,9 +113,10 @@ def save_qualifying_loans(qualifying_loans):
     # @TODO: Complete the usability dialog for savings the CSV Files.
     # YOUR CODE HERE!
     save_value = questionary.confirm("Would you like to save your qualifying bank loans?").ask()
+    save_location = questionary.text("Enter a file path to save the qualifying loans (.csv):").ask()
 
     if save_value == True:
-        with open("qualifying_loans.csv", 'w', newline="") as csvfile:
+        with open(save_location, 'w', newline="") as csvfile:
             csvwriter = csv.writer(csvfile)
             for loan in qualifying_loans:
                 csvwriter.writerow(loan)
