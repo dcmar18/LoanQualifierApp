@@ -6,6 +6,7 @@ This is a command line application to match applicants with qualifying loans.
 Example:
     $ python app.py
 """
+import csv
 import sys
 import fire
 import questionary
@@ -114,6 +115,10 @@ def save_qualifying_loans(qualifying_loans):
     save_value = questionary.confirm("Would you like to save your qualifying bank loans?").ask()
 
     if save_value == True:
+        with open("qualifying_loans.csv", 'w', newline="") as csvfile:
+            csvwriter = csv.writer(csvfile)
+            for loan in qualifying_loans:
+                csvwriter.writerow(loan)
         print("Your qualifying loans have now been saved.")
     else:
         print("Your qualifying loans were not saved.")
