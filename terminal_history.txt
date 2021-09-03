@@ -1,0 +1,44 @@
+    1  dir
+    2  cd OneDrive\ -\ UW
+    3  dir
+    4  cd Digital \Signage
+    5  cd DawgDaze
+    6  git init
+    7  git add README.md
+    8  git branch -M main
+    9  git remote add origin https://github.com/dcmar18/DawgDaze.git
+   10  exit
+   11  cd documents
+   12  cd FinTech_Workspace
+   13  cd Module2
+   14  git clone https://github.com/dcmar18/LoanQualifierApp.git
+   15  dir
+   16  cd LoanQualifierApp
+   17  git add --all
+   18  git status
+   19  git commit -m "Uploaded initial files"
+   20  git push
+   21  git add app.py
+   22  git commit -m "Updated CLI to ask user if they want to save their qualifying loans"
+   23  git push
+   24  git add app.py
+   25  git commit -m "Updated code so a user can save qualifying loans"
+   26  git push
+   27  git add app.py
+   28  git commit -m "Updated code so it prompts user where to save file"
+   29  exit
+   30  cd documents
+   31  cd FinTech-Workspace
+   32  cd FinTech_Workspace
+   33  dir
+   34  cd Module2
+   35  cd LoanQualifierApp
+   36  git status
+   37  git add app.py
+   38  git add README.md
+   39  git add user_prompts.jpg
+   40  git status
+   41  git commit "Updated README file, uploaded jpg of CLI"
+   42  git commit -m "Updated README file, uploaded jpg of CLI"
+   43  git push
+   44  history 50 > terminal_history.txt
